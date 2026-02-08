@@ -74,6 +74,7 @@ for SRC in "${SOURCES[@]}"; do
             -o -iname "*.rw2" \
             -o -iname "*.mp4" \
             -o -iname "*.insv" \
+	    -o -iname "*.insp" \
             -o -iname "*.dng" \
         \) -print0 | \
         xargs -0 -n1 -P "$PARALLEL_JOBS" bash -c 'copy_file "$0"' 
